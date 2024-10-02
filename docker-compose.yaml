@@ -12,7 +12,7 @@ services:
     restart: unless-stopped  # Restart policy
 
   backend:
-    image: java-backend-image:1.0.0-15
+    image: java-backend-image:1.0.0-16
     ports:
       - "9090:8080"  # Map host port 8080 to container port 8080
     environment:
