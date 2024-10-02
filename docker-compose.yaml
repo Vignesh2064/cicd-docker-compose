@@ -2,7 +2,7 @@ version: '3.8'  # Specify the version of Docker Compose
 
 services:
   app:
-    image: node-app-test-new:1.0.0-3  # Specify the image name and version
+    image: node-app-test-new:1.0.0-9
     ports:
       - "8000:8000"  # Map host port 8000 to container port 8000
     environment:
