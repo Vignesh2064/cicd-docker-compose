@@ -1,4 +1,4 @@
-version: '3.8'  # Specify the version of Docker Compose
+version: '3.8'
 
 services:
   app:
@@ -6,20 +6,17 @@ services:
     ports:
       - "8000:8000"  # Map host port 8000 to container port 8000
     environment:
-      NODE_ENV: production  # Environment variables
-    volumes:
-      - ./:/node  # Optional: Mount the current directory to /node in the container
+      NODE_ENV: production
+    working_dir: /node  # Set the working directory in the container
+    command: ["node", "app.js"]  # Specify the command to run your application
     restart: unless-stopped  # Restart policy
 
   backend:
     image: java-backend-image:1.0.0-18
     ports:
-      - "9090:8080"  # Map host port 8080 to container port 8080
+      - "9090:8080"  # Map host port 9090 to container port 8080
     environment:
-      # Specify environment variables if needed
       JAVA_ENV: production
-    volumes:
-      - ./backend:/app  # Optional: Mount the backend directory to /app in the container
     depends_on:
       - app  # Ensure backend starts after app
     restart: unless-stopped  # Restart policy
