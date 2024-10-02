@@ -14,7 +14,7 @@ services:
   backend:
     image: java-backend-image:1.0.0-9  # The backend Docker image
     ports:
-      - "8080:8080"  # Map host port 8080 to container port 8080
+      - "9090:8080"  # Map host port 8080 to container port 8080
     environment:
       # Specify environment variables if needed
       JAVA_ENV: production
