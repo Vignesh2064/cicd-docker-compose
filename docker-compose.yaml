@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: node-app-test-new:2024-10-12-10-22-42-29
+    image: node-app-test-new:2024-10-12-10-23-20-30
     ports:
       - "8000:8000"  # Map host port 8000 to container port 8000
     environment:
