@@ -12,7 +12,7 @@
 #     restart: unless-stopped  # Restart policy
 
 #   backend:
-#     image: java-backend-image:2024-10-14-08-32-59-build-18
+#     image: java-backend-image:2024-10-14-08-37-29-build-19
 #     ports:
 #       - "9090:8080"  # Map host port 9090 to container port 8080
 #     environment:
@@ -34,7 +34,7 @@ services:
     restart: unless-stopped  # Restart policy
 
   backend:
-    image: java-backend-image:2024-10-14-08-29-17-build-17  # Removed duplicate tag
+    image: java-backend-image:2024-10-14-08-37-29-build-19
     ports:
       - "7072:7072"  # Map host port 9090 to container port 8080
     environment:
